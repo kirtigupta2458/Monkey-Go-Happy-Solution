@@ -94,27 +94,13 @@ function draw() {
 function spawnFood() {
   //write code here to spawn the food
   if (frameCount % 80 === 0) {
-    var banana = createSprite(600,250,40,10);
-    banana.y = random(120,200);    
-    banana.addImage(bananaImage);
-    banana.scale = 0.05;
-    banana.velocityX= -4; 
     
-    banana.lifetime = 300;
-    player.depth = banana.depth + 1;
-    FoodGroup.add(banana);
   }
 }
 
 function spawnObstacles() {
   //write code here to spawn the obstacles
   if(frameCount % 300 === 0) {
-    var obstacle = createSprite(800,350,10,40);
-    obstacle.velocityX=-(4 + 2*score/100); 
-    obstacle.addImage(obstacle_img);
-    
-    obstacle.scale = 0.2;
-    obstacle.lifetime = 300;
-    obstaclesGroup.add(obstacle);
+   
   }
 }
